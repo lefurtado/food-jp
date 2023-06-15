@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import CardCardapio from "./components/CardCardapio";
 import Header from "./components/Header";
 import Titulo from "./components/Titulo";
 
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Titulo />
       <Banner />
+      <CardCardapio />
     </>
   );
 }
