@@ -63,6 +63,10 @@ const ImagemStyle = styled.div`
 
     & img {
         width: 209px;
+        transition: transform 0.5s ease;
+            &:hover {
+            transform: scale(1.1);
+        }
     }
 `;
 
