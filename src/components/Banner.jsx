@@ -41,7 +41,7 @@ const ConteudoStyle = styled.div`
         max-width: 290px;
     }
 
-    & span {
+    & a {
         font-family: 'Inter', sans-serif;
         color: ${({theme}) => theme.colors.brandColor};
         cursor: pointer;
@@ -63,9 +63,9 @@ export default function Banner() {
                     sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua.
                 </p>
-                <span>
+                <a href="#">
                     Ler mais sobre o modo de preparo 
-                </span>
+                </a>
             </ConteudoStyle>
         </MainContainerStyle>
     )

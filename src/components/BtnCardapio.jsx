@@ -14,8 +14,10 @@ const BtnStyle = styled.button`
 
 export default function BtnCardapio() {
     return (
-        <BtnStyle>
-            Cardápio
-        </BtnStyle>
+        <a href="#">
+            <BtnStyle>
+                Cardápio
+            </BtnStyle>
+        </a>
     )
 }
