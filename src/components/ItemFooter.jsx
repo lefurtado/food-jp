@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const ItemFooterStyle = styled.div`
     font-family: 'Inter', sans-serif;
     font-size: 14px;
+    margin-top: 7px;
 
     a {
         text-decoration: none;
