@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Subtitulo from "./Subtitulo";
 
 const MainContainerStyle = styled.div`
     display: flex;
@@ -55,9 +56,7 @@ export default function Banner() {
         <MainContainerStyle>
             <BannerStyle />
             <ConteudoStyle>
-                <h2>
-                    Feita de forma Tradicional
-                </h2>
+                <Subtitulo>Feita de forma tradicional</Subtitulo>
                 <p>
                     Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit, 

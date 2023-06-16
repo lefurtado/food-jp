@@ -2,6 +2,7 @@ import styled from "styled-components";
 import pratoUm from '../assets/img-3.png';
 import pratoDois from '../assets/img-1.png';
 import pratoTres from '../assets/img-2.png';
+import Subtitulo from "./Subtitulo";
 
 const pratos = [
     {
@@ -29,15 +30,6 @@ const pratos = [
         alt: 'Ramen Tradicional'
     }
 ];
-
-const TituloStyled = styled.h2`
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    margin: 56px 0 118px 0;
-    color: ${({theme}) => theme.colors.dark10};
-`;
 
 const CardContainerFlexStyle = styled.div`
     display: flex;
@@ -99,10 +91,16 @@ const DescricaoStyle = styled.div`
     }
 `;
 
+const MarginStyle = styled.div`
+    margin: 56px 0 118px 0;
+`;
+
 export default function CardCardapio() {
     return (
         <div>
-            <TituloStyled>Mais populares</TituloStyled>
+            <MarginStyle>
+                <Subtitulo>Mais populares</Subtitulo>
+            </MarginStyle>
             <CardContainerFlexStyle>
                 {pratos.map((prato) => (
                         <CardStyle key={prato.id}>
