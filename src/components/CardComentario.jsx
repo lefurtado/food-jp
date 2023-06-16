@@ -22,7 +22,7 @@ const comentarios = [
 ];
 
 const MarginStyle = styled.div`
-    margin: 56px 0 56px 0;
+    margin: 56px 0;
 `;
 
 const CardComentarioFlexStyle = styled.div`
