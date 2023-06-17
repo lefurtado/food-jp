@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Subtitulo from "./Subtitulo";
+import maoSegurandoPrato from '../assets/img_segurando_prato.png';
 
 const MainContainerStyle = styled.div`
     display: flex;
@@ -7,7 +8,7 @@ const MainContainerStyle = styled.div`
 `;
 
 const BannerStyle = styled.div`
-    background-image: url("/src/assets/img segurando prato.png");
+    background-image: url(${maoSegurandoPrato});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
