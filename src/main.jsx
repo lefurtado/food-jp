@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={variables}>
       <Reset />
-      <Global />
       <App />
+      <Global />
     </ThemeProvider>
   </React.StrictMode>
 );
