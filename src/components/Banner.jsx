@@ -5,6 +5,12 @@ import maoSegurandoPrato from '../assets/img_segurando_prato.png';
 const MainContainerStyle = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media(min-width: 1280px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 `;
 
 const BannerStyle = styled.div`
@@ -16,6 +22,11 @@ const BannerStyle = styled.div`
     height: 350px;
     border-radius: 8px;
     margin-top: 48px;
+
+    @media(min-width: 1280px) {
+        width: 604px;
+        height: 500px;
+    }
 `;
 
 const ConteudoStyle = styled.div`
@@ -28,9 +39,6 @@ const ConteudoStyle = styled.div`
     margin-top: 54px;
 
     & h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 24px;
         max-width: 181px;
         line-height: 130%;
     }

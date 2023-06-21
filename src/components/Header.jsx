@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
+import ItemNavbar from "./ItemNavbar";
+import BtnEntrar from "./BtnEntrar";
 
 // TESTE
 const MenuHamburguer = styled.div`
@@ -11,6 +13,12 @@ const MenuHamburguer = styled.div`
     width: 30px;
     height: 25px;
     cursor: pointer;
+`;
+
+const HamburgerContainer = styled.div`
+    @media(min-width: 1280px) {
+        display: none;
+    }
 `;
 
 const LinhaMenu = styled.div`
@@ -29,6 +37,7 @@ const TesteStyle = styled.div`
     top: 0;
     bottom: 0;
     right: 0;
+    box-shadow: -12px 0px 34px -6px rgba(0,0,0,0.75);
 
     & ul {
         position: fixed;
@@ -76,7 +85,16 @@ const HamburgerMenuStyle = styled.span`
     background-color: black;
 `;
 
+const NavbarStyle = styled.div`
+    display: none;
 
+    @media(min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+    }
+`;
 
 export default function Header() {
     // TESTE
@@ -101,8 +119,14 @@ export default function Header() {
     return (
         <HeaderContainerStyle>
             <Logo />
+            <NavbarStyle>
+                <ItemNavbar>Início</ItemNavbar>
+                <ItemNavbar>Cardápio</ItemNavbar>
+                <ItemNavbar>Sobre</ItemNavbar>
+            </NavbarStyle>
+            <BtnEntrar />
             {/* TESTE */}
-            <div>
+            <HamburgerContainer>
                 <MenuHamburguer onClick={toggleMenu}>
                     <LinhaMenu />
                     <LinhaMenu />
@@ -124,7 +148,7 @@ export default function Header() {
                         </ul>
                     </TesteStyle>
                 )}
-            </div>
+            </HamburgerContainer>
             {/* TESTE */}
             {/* <HamburgerMenuStyle /> */}
         </HeaderContainerStyle>

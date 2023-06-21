@@ -10,14 +10,17 @@ const BtnStyle = styled.button`
         font-size: 16px;
         font-weight: 600;
         width: 100%;
+        cursor: pointer;
+
+        @media(min-width: 1280px) {
+            max-width: 292px;
+        }
 `
 
 export default function BtnCardapio() {
     return (
-        <a href="#">
-            <BtnStyle>
-                Cardápio
-            </BtnStyle>
-        </a>
+        <BtnStyle>
+            Cardápio
+        </BtnStyle>
     )
 }

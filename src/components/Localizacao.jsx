@@ -4,6 +4,12 @@ import mapa from '../assets/map.png';
 
 const MarginStyle = styled.div`
     margin: 56px 0 24px 0;
+
+    h2 {
+        @media(min-width: 1280px) {
+            text-align: start;
+        }
+    }
 `;
 
 const MapaStyle = styled.div`
@@ -14,6 +20,11 @@ const MapaStyle = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media(min-width: 1280px) {
+        max-width: 1228px;
+        height: 500px;
+    }
 `;
 
 export default function Localizacao() {

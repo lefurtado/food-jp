@@ -10,6 +10,11 @@ import Titulo from "./components/Titulo";
 
 const BodyContainerStyle = styled.body`
   margin: 0 30px;
+
+  @media(min-width: 1280px) {
+    max-width: 1228px;
+    margin: auto;
+  }
 `;
 
 function App() {

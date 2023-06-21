@@ -5,6 +5,11 @@ import Logo from "./Logo";
 
 const FooterStyle = styled.div`
     margin: 56px 0;
+
+    @media(min-width: 1280px) {
+        display: flex;
+        align-items: baseline;
+    }
 `;
 
 const LinkContainerStyle = styled.div`
@@ -15,6 +20,13 @@ const LinkContainerStyle = styled.div`
     max-height: 200px;
     gap: 28px;
     margin-top: 32px;
+
+    @media(min-width: 1280px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: fit-content;
+        gap: 50px;
+    }
 `;
 
 const LinkStyle = styled.div`

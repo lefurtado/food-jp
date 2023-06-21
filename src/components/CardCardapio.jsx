@@ -36,6 +36,10 @@ const CardContainerFlexStyle = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 118px;
+
+    @media(min-width: 1280px) {
+        gap: 44px;
+    }
     /* CRIAR UM MEDIA QUE CONTEMPLE UM GAP MENOR PRA DESKTOP */
 `;
 
@@ -47,14 +51,23 @@ const CardStyle = styled.div`
     width: 312px;
     height: 401px;
     border-radius: 8px;
+
+    @media(min-width: 1280px) {
+        width: 380px;
+        height: 450px;
+    }
 `;
 
 const ImagemStyle = styled.div`
     position: relative;
-    bottom: 10%;
+    bottom: 15%;
 
     & img {
         width: 209px;
+
+        @media(min-width: 1280px) {
+            /* width: 296px; */
+        }
         transition: transform 0.5s ease;
             &:hover {
             transform: scale(1.1);

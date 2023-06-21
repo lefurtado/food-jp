@@ -5,6 +5,11 @@ const InputStyle = styled.div`
     position: relative;
     display: flex;
     margin-top: 32px;
+
+    @media(min-width: 1280px) {
+        max-width: 813px;
+        margin: 56px auto;
+    }
     
     input {
         box-sizing: border-box;
@@ -15,6 +20,10 @@ const InputStyle = styled.div`
         height: 40px;
         background-color: #FBFBFB;
         width: 100%;
+
+        @media(min-width: 1280px) {
+            height: 70px;
+        }
 
         &::placeholder {
             font-family: 'Inter', sans-serif;
@@ -41,6 +50,10 @@ const LupaStyle = styled.button`
     width: 51px;
     background-color: ${({theme}) => theme.colors.brandColor};
     border-radius: 0px 10px 10px 0px;
+
+    @media(min-width: 1280px) {
+        width: 183px;
+    }
 
     a {
         text-decoration: none;

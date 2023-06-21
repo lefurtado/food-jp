@@ -23,6 +23,12 @@ const comentarios = [
 
 const MarginStyle = styled.div`
     margin: 56px 0;
+    
+    h2 {
+        @media(min-width: 1280px) {
+            text-align: start;
+        }
+    }
 `;
 
 const CardComentarioFlexStyle = styled.div`
@@ -30,6 +36,10 @@ const CardComentarioFlexStyle = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 28px;
+
+    @media(min-width: 1280px) {
+        gap: 20px;
+    }
 `;
 
 const CardComentarioStyle = styled.div`
@@ -42,11 +52,23 @@ const CardComentarioStyle = styled.div`
     max-height: 300px;
     border-radius: 8px;
     padding: 24px 0;
+
+    @media(min-width: 1280px) {
+        box-sizing: border-box;
+        width: 604px;
+        height: 390px;
+        align-items: flex-start;
+        padding: 40px;
+    }
 `;
 
 const ImagemComentarioStyle = styled.div`
     & img {
         width: 60px;
+
+        @media(min-width: 1280px) {
+            width: 120px;
+        }
     }
 `;
 
@@ -55,6 +77,11 @@ const ComentarioStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    @media(min-width: 1280px) {
+        text-align: start;
+        gap: 16px;
+    }
 
     & h2 {
         font-family: 'Montserrat', sans-serif;
@@ -70,6 +97,10 @@ const ComentarioStyle = styled.div`
         line-height: 160%;
         color: ${({theme}) => theme.colors.dark20};
         max-width: 270px;
+
+        @media(min-width: 1280px) {
+            max-width: 400px;
+        }
     }
 
     & .nota {
@@ -78,6 +109,10 @@ const ComentarioStyle = styled.div`
         justify-content: space-between;
         width: 122px;
         color: ${({theme}) => theme.colors.brandColor};
+
+        @media(min-width: 1280px) {
+            align-self: baseline;
+        }
     }
 `;
 
@@ -90,7 +125,7 @@ export default function CardComentario() {
     };
 
     return (
-        <div>
+        <>
             <MarginStyle>
                 <Subtitulo>Comentários</Subtitulo>
             </MarginStyle>
@@ -110,6 +145,6 @@ export default function CardComentario() {
                     </CardComentarioStyle>
                 ))}
             </CardComentarioFlexStyle>
-        </div>
+        </>
     )
 }
