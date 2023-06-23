@@ -13,6 +13,7 @@ const TituloContainerStyle = styled.div`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-top: 100px;
     }
 `;
 
@@ -24,9 +25,13 @@ const ContainerDescricaoStyle = styled.div`
 
 const TituloStyle = styled.div`
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 32px;
     color: ${({theme}) => theme.colors.dark10};
+
+    @media(min-width: 1280px) {
+        font-size: 48px;
+    }
 `;
 
 const DescricaoStyle = styled.div`
@@ -37,7 +42,8 @@ const DescricaoStyle = styled.div`
     max-width: 278px;
 
     @media(min-width: 1280px) {
-        max-width: 360px;
+        max-width: 520px;
+        font-size: 24px;
     }
 `;
 
@@ -51,14 +57,14 @@ const ImagemTitulo = styled.div`
         background-position: center;
         background-size: cover;
         width: 400px;
-        height: 534px;
+        height: 534.703px;
     }
 `;
 
 export default function Titulo() {
     return (
-        <TituloContainerStyle>
-            <ContainerDescricaoStyle>
+        <TituloContainerStyle >
+            <ContainerDescricaoStyle data-aos='zoom-in'>
                 <TituloStyle>
                     <h1>Comida Oriental</h1>
                 </TituloStyle>
@@ -70,7 +76,7 @@ export default function Titulo() {
                 </DescricaoStyle>
                 <BtnCardapio />
             </ContainerDescricaoStyle>
-            <ImagemTitulo />
+            <ImagemTitulo data-aos='zoom-in'/>
         </TituloContainerStyle>
     );
 }

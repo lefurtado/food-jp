@@ -14,6 +14,7 @@ const BtnStyle = styled.button`
 
         @media(min-width: 1280px) {
             max-width: 292px;
+            font-size: 24px;
         }
 `
 

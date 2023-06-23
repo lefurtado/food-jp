@@ -7,6 +7,11 @@ const SubtituloFooterStyle = styled.div`
     font-weight: 600;
     color: ${({theme}) => theme.colors.dark10};
     margin-bottom: 5px;
+
+    @media(min-width: 1280px) {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
 `;
 
 export default function SubtituloFooter({ children }) {

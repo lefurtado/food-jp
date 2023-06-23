@@ -26,6 +26,7 @@ const BannerStyle = styled.div`
     @media(min-width: 1280px) {
         width: 604px;
         height: 500px;
+        margin-top: 100px;
     }
 `;
 
@@ -38,9 +39,18 @@ const ConteudoStyle = styled.div`
     gap: 24px;
     margin-top: 54px;
 
+    @media(min-width: 1280px) {
+        text-align: start;
+        align-items: baseline;
+    }
+
     & h2 {
         max-width: 181px;
         line-height: 130%;
+
+        @media(min-width: 1280px) {
+            max-width: 361px;
+        }
     }
 
     & p {
@@ -48,6 +58,11 @@ const ConteudoStyle = styled.div`
         font-size: 16px;
         line-height: 25px;
         max-width: 290px;
+
+        @media(min-width: 1280px) {
+            font-size: 24px;
+            max-width: 500px;
+        }
     }
 
     & a {
@@ -57,14 +72,19 @@ const ConteudoStyle = styled.div`
         font-size: 16px;
         text-decoration: underline;
         font-weight: 600;
+
+        @media(min-width: 1280px) {
+            font-size: 24px;
+            margin-top: 16px;
+        }
     }
 `;
 
 export default function Banner() {
     return (
         <MainContainerStyle>
-            <BannerStyle />
-            <ConteudoStyle>
+            <BannerStyle data-aos='fade-right'/>
+            <ConteudoStyle data-aos='fade-up'>
                 <Subtitulo>Feita de forma tradicional</Subtitulo>
                 <p>
                     Lorem ipsum dolor sit amet, 

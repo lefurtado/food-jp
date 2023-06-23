@@ -5,10 +5,8 @@ import mapa from '../assets/map.png';
 const MarginStyle = styled.div`
     margin: 56px 0 24px 0;
 
-    h2 {
-        @media(min-width: 1280px) {
-            text-align: start;
-        }
+    @media(min-width: 1280px) {
+        margin: 100px 0 48px 0;
     }
 `;
 
@@ -24,16 +22,17 @@ const MapaStyle = styled.div`
     @media(min-width: 1280px) {
         max-width: 1228px;
         height: 500px;
+        border-radius: 16px;
     }
 `;
 
 export default function Localizacao() {
     return (
-        <div>
-            <MarginStyle>
+        <>
+            <MarginStyle data-aos='zoom-in'>
                 <Subtitulo>Localização</Subtitulo>
             </MarginStyle>
-            <MapaStyle />
-        </div>
+            <MapaStyle data-aos='zoom-in-up'/>
+        </>
     )
 }

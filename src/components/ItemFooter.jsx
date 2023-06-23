@@ -6,6 +6,11 @@ const ItemFooterStyle = styled.div`
     font-size: 14px;
     margin-top: 7px;
 
+    @media(min-width: 1280px) {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
     a {
         text-decoration: none;
         color: ${({theme}) => theme.colors.dark10};

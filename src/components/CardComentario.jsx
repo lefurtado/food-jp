@@ -23,11 +23,9 @@ const comentarios = [
 
 const MarginStyle = styled.div`
     margin: 56px 0;
-    
-    h2 {
-        @media(min-width: 1280px) {
-            text-align: start;
-        }
+
+    @media(min-width: 1280px) {
+        margin-top: 100px;
     }
 `;
 
@@ -56,9 +54,10 @@ const CardComentarioStyle = styled.div`
     @media(min-width: 1280px) {
         box-sizing: border-box;
         width: 604px;
-        height: 390px;
+        min-height: 390px;
         align-items: flex-start;
-        padding: 40px;
+        padding: 0 40px;
+        border-radius: 16px;
     }
 `;
 
@@ -81,6 +80,7 @@ const ComentarioStyle = styled.div`
     @media(min-width: 1280px) {
         text-align: start;
         gap: 16px;
+        margin-top: 24px;
     }
 
     & h2 {
@@ -88,6 +88,10 @@ const ComentarioStyle = styled.div`
         font-weight: 600;
         font-size: 18px;
         color: ${({theme}) => theme.colors.dark10};
+
+        @media(min-width: 1280px) {
+            font-size: 32px;
+        }
     }
 
     & p {
@@ -99,7 +103,8 @@ const ComentarioStyle = styled.div`
         max-width: 270px;
 
         @media(min-width: 1280px) {
-            max-width: 400px;
+            max-width: 490px;
+            font-size: 24px;
         }
     }
 
@@ -126,10 +131,10 @@ export default function CardComentario() {
 
     return (
         <>
-            <MarginStyle>
+            <MarginStyle data-aos='zoom-in'>
                 <Subtitulo>Comentários</Subtitulo>
             </MarginStyle>
-            <CardComentarioFlexStyle>
+            <CardComentarioFlexStyle data-aos='zoom-in'>
                 {comentarios.map((comentario) => (
                     <CardComentarioStyle key={comentario.id}>
                         <ImagemComentarioStyle>

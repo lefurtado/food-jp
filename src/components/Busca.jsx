@@ -23,6 +23,8 @@ const InputStyle = styled.div`
 
         @media(min-width: 1280px) {
             height: 70px;
+            padding-left: 50px;
+            font-size: 24px;
         }
 
         &::placeholder {
@@ -30,6 +32,10 @@ const InputStyle = styled.div`
             font-size: 12px;
             color: ${({theme}) => theme.colors.dark10};
             padding-left: 10px;
+
+            @media(min-width: 1280px) {
+                font-size: 24px;
+            }
         }
     }
 
@@ -39,6 +45,11 @@ const InputStyle = styled.div`
         top: 50%;
         transform: translateY(-50%);
         color: ${({theme}) => theme.colors.brandColor};
+
+        @media(min-width: 1280px) {
+            width: 30px;
+            height: 30px;
+        }
     }
 `;
 
@@ -63,7 +74,7 @@ const LupaStyle = styled.button`
 
 export default function Busca() {
     return (
-        <InputStyle>
+        <InputStyle data-aos='fade-up'>
             <AiOutlineEnvironment className="gps" size={20} />
             <input type="text" placeholder="Localização para entrega"/>
             <LupaStyle>

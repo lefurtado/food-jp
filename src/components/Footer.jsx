@@ -26,6 +26,7 @@ const LinkContainerStyle = styled.div`
         flex-wrap: nowrap;
         max-width: fit-content;
         gap: 50px;
+        margin-left: 51px;
     }
 `;
 
@@ -37,20 +38,20 @@ const LinkStyle = styled.div`
 export default function Footer() {
     return (
         <FooterStyle>
-            <Logo /> 
+            <Logo />
                 <LinkContainerStyle>
-                    <LinkStyle>
+                    <LinkStyle data-aos='fade-up'>
                         <SubtituloFooter>Contato</SubtituloFooter>
                         <ItemFooter>+55 21 9999-9999</ItemFooter>
                         <ItemFooter>email@gmail.com</ItemFooter>
                     </LinkStyle>
-                    <LinkStyle>
+                    <LinkStyle data-aos='fade-up'>
                         <SubtituloFooter>Sobre nós</SubtituloFooter>
                         <ItemFooter>Menu</ItemFooter>
                         <ItemFooter>Valores</ItemFooter>
                         <ItemFooter>Pagina principal</ItemFooter>
                     </LinkStyle>
-                    <LinkStyle>
+                    <LinkStyle data-aos='fade-up'>
                         <SubtituloFooter>Serviços</SubtituloFooter>
                         <ItemFooter>Entrega</ItemFooter>
                         <ItemFooter>Retirada</ItemFooter>

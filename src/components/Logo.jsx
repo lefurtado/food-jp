@@ -6,6 +6,10 @@ const LogoStyle = styled.div`
     font-size: 24px;
     color: ${({theme}) => theme.colors.dark10};
 
+    @media(min-width: 1280px) {
+        font-size: 40px;
+    }
+
     & span {
         color: ${({theme}) => theme.colors.brandColor};
     }

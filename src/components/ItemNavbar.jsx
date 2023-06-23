@@ -5,9 +5,17 @@ const ItemStyle = styled.div`
     font-family: 'Inter', sans-serif;
     font-size: 18px;
 
+    @media(min-width: 1280px) {
+        font-size: 24px;
+    }
+
     a {
         text-decoration: none;
         color: black;
+
+        :hover {
+            color: ${({theme}) => theme.colors.brandColor};
+        }
     }
 `;
 
